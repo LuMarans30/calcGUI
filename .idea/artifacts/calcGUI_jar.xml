@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="calcGUI:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/calcGUI_jar</output-path>
+    <root id="archive" name="calcGUI.jar">
+      <element id="module-output" name="calcGUI" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/json-20220320.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/httpcore5-5.1.3.jar" path-in-jar="/" />
+      <element id="library" level="project" name="flatlaf-2.1" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/httpclient5-fluent-5.1.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/httpclient5-5.1.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/okhttp-4.9.3.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
