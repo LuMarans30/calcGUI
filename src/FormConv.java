@@ -63,6 +63,20 @@ public class FormConv extends JFrame {
         }
         setResizable(false);
         setVisible(true);
+        
+        radioBtnInverti.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if(radioBtnInverti.isSelected())
+                {
+                    //inversione dei valori nelle combobox
+                    Valuta temp = (Valuta) cmbSorg.getSelectedItem();
+                    cmbSorg.setSelectedItem(cmbDest.getSelectedItem());
+                    cmbDest.setSelectedItem(temp);
+                    calcola();
+                }
+            }
+        });
 
         btnCalc.addActionListener(new ActionListener() {
             @Override
@@ -147,12 +161,6 @@ public class FormConv extends JFrame {
             }
         });
 
-        radioBtnInverti.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        });
         txtInput.getDocument().addDocumentListener(new DocumentListener() {
 
             public void removeUpdate(DocumentEvent e) {
@@ -190,19 +198,7 @@ public class FormConv extends JFrame {
                     txtInput.append(".");
             }
         });
-        radioBtnInverti.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                if(radioBtnInverti.isSelected())
-                {
-                    //inversione dei valori nelle combobox
-                    Valuta temp = (Valuta) cmbSorg.getSelectedItem();
-                    cmbSorg.setSelectedItem(cmbDest.getSelectedItem());
-                    cmbDest.setSelectedItem(temp);
-                    calcola();
-                }
-            }
-        });
+
         cmbDest.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
